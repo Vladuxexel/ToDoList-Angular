@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #dc3545;
+    --dark-color: #333333;
+    --light-color: #f4f4f4;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.btn{
+    border: none;
+}
