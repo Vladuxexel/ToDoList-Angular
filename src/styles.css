@@ -25,4 +25,19 @@ ul{
 
 .btn{
     border: none;
+    font-family: inherit;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.btn-primary{
+    background-color: chartreuse;
+    font-size: 1rem;
+    float: left;
+}
+
+.btn-denial{
+    background-color: tomato;
+    font-size: 1rem;
+    float: right;
 }

@@ -8,11 +8,11 @@ import { ModalModule } from './_modal';
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    ModalModule
+    ListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
