@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AddDialogComponent } from '../add-dialog/add-dialog.component';
 
 @Component({
   selector: 'app-list',
@@ -8,10 +7,7 @@ import { AddDialogComponent } from '../add-dialog/add-dialog.component';
 })
 export class ListComponent implements OnInit {
 
-  public dialog = new AddDialogComponent();
-
   constructor() { 
-    this.dialog.visible = false;
   }
 
   ngOnInit(): void {
