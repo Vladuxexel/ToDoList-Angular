@@ -5,8 +5,19 @@
     </header>
     <main>
         <ul>
-            <li>Something</li>
-            <li>Something else</li>
+            <li *ngFor="let item of list">
+                <div id="listElement">
+                    <input type="checkbox" id="qwe" class="itemData">
+                    <div class="itemData main">
+                        <h3>{{item.name}}</h3>
+                        <p>{{item.description}}</p>
+                    </div>
+                    <div class="itemData setters">
+                        <button class="btn btn-primary">Изменить</button>
+                        <button class="btn btn-denial">Удалить</button>
+                    </div>
+                </div>
+            </li>
         </ul>
     </main>
 </section>
@@ -15,12 +26,12 @@
     <div class="form">
         <div>
             <p><strong>Название задачи:</strong></p>
-            <input type="text" name="username">
+            <input type="text" name="username" [(ngModel)]="name">
         </div>
         <p><strong>Описание задачи:</strong></p>
-        <textarea></textarea>
-        <div>
-            <button class="btn btn-primary">Добавить</button>
+        <textarea [(ngModel)]="description"></textarea>
+        <div id="buttons">
+            <button class="btn btn-primary" (click)="addNewTask()">Добавить</button>
             <button class="btn btn-denial" (click)="modalService.close('modal-1')">Закрыть</button>
         </div>
     </div>
