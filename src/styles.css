@@ -14,7 +14,8 @@ ul{
 
 li{
     border: 1px solid #000;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
 }
 
 .container{

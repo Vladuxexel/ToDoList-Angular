@@ -13,8 +13,8 @@
                         <p>{{item.description}}</p>
                     </div>
                     <div class="itemData setters">
-                        <button class="btn btn-primary">Изменить</button>
-                        <button class="btn btn-denial">Удалить</button>
+                        <button class="btn btn-primary" (click)="editTask(item)">Изменить</button>
+                        <button class="btn btn-denial" (click)="deleteTask(item)">Удалить</button>
                     </div>
                 </div>
             </li>
@@ -31,7 +31,7 @@
         <p><strong>Описание задачи:</strong></p>
         <textarea [(ngModel)]="description"></textarea>
         <div id="buttons">
-            <button class="btn btn-primary" (click)="addNewTask()">Добавить</button>
+            <button class="btn btn-primary" (click)="addNewTask()">Ок</button>
             <button class="btn btn-denial" (click)="modalService.close('modal-1')">Закрыть</button>
         </div>
     </div>
