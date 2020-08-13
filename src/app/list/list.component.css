@@ -52,6 +52,28 @@ textarea{
     width: 70%;
 }
 
+.paginator{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.pgLine{
+    display: inline;
+}
+
+.paginator span{
+    border: 1px solid #000;
+    margin: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.isActive{
+    font-weight: bold;
+    background-color: lightseagreen;
+}
+
 #menuBtn{
     margin-bottom: 1rem;
     width: 100%;

@@ -5,7 +5,7 @@
     </header>
     <main>
         <ul>
-            <li *ngFor="let item of list">
+            <li *ngFor="let item of page">
                 <div id="listElement">
                     <input type="checkbox" id="qwe" class="itemData">
                     <div class="itemData main">
@@ -21,8 +21,15 @@
         </ul>
     </main>
 </section>
+<div class="paginator">
+    <span class="pgLine" (click)="pageDown()">&laquo;</span>
+    <div *ngFor="let item of paginator" class="pgLine">
+        <span (click)="goToPage(item)" [class.isActive]="item.isActive">{{item.id}}</span>
+    </div>
+    <span class="pgLine" (click)="pageUp()">&raquo;</span>    
+</div>
   <jw-modal id="modal-1">
-    <h2>Новая задача</h2>
+    <h2>Задача</h2>
     <div class="form">
         <div>
             <p><strong>Название задачи:</strong></p>
