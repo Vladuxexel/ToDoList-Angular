@@ -122,6 +122,9 @@ export class ListComponent implements OnInit {
     else if(this.paginator.length > Math.ceil(this.list.length / 5)){
       this.paginator.pop();
     }
+    if(this.paginator.length === 1){
+      this.paginator[0].isActive = true;
+    }
   }
 
   goToPage(item){

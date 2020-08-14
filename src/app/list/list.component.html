@@ -21,7 +21,7 @@
         </ul>
     </main>
 </section>
-<div class="paginator">
+<div *ngIf="list.length>0" class="paginator">
     <span class="pgLine" (click)="pageDown()">&laquo;</span>
     <div *ngFor="let item of paginator" class="pgLine">
         <span (click)="goToPage(item)" [class.isActive]="item.isActive">{{item.id}}</span>
