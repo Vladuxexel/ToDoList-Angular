@@ -37,6 +37,7 @@ textarea{
 .itemData{
     display: inline-block;
     vertical-align: middle;
+    overflow: hidden;
 }
 
 .setters{
