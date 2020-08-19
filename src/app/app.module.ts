@@ -7,16 +7,9 @@ import { ModalModule } from './_modal';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ListComponent
-  ],
-  imports: [
-    BrowserModule,
-    ModalModule,
-    FormsModule
-  ],
+  declarations: [AppComponent, ListComponent],
+  imports: [BrowserModule, ModalModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

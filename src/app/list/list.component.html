@@ -1,45 +1,55 @@
 <section>
-    <header>
-        <button id="menuBtn" class="btn" (click)="modalService.open('modal-1')"><strong>+</strong></button>
-        <hr/>
-    </header>
-    <main>
-        <ul>
-            <li *ngFor="let item of page">
-                <div id="listElement">
-                    <input type="checkbox" id="qwe" class="itemData">
-                    <div class="itemData main">
-                        <h3>{{item.name}}</h3>
-                        <p>{{item.description}}</p>
-                    </div>
-                    <div class="itemData setters">
-                        <button class="btn btn-primary" (click)="editTask(item)">Изменить</button>
-                        <button class="btn btn-denial" (click)="deleteTask(item)">Удалить</button>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </main>
+  <header>
+    <button id="menuBtn" class="btn" (click)="modalService.open('modal-1')">
+      <strong>+</strong>
+    </button>
+    <hr />
+  </header>
+  <main>
+    <ul>
+      <li *ngFor="let item of page">
+        <div id="listElement">
+          <input type="checkbox" id="qwe" class="itemData" />
+          <div class="itemData main">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+          <div class="itemData setters">
+            <button class="btn btn-primary" (click)="editTask(item)">
+              Изменить
+            </button>
+            <button class="btn btn-denial" (click)="deleteTask(item)">
+              Удалить
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </main>
 </section>
-<div *ngIf="list.length>0" class="paginator">
-    <span class="pgLine" (click)="pageDown()">&laquo;</span>
-    <div *ngFor="let item of paginator" class="pgLine">
-        <span (click)="goToPage(item)" [class.isActive]="item.isActive">{{item.id}}</span>
-    </div>
-    <span class="pgLine" (click)="pageUp()">&raquo;</span>    
+<div *ngIf="list.length > 0" class="paginator">
+  <span class="pgLine" (click)="pageDown()">&laquo;</span>
+  <div *ngFor="let item of paginator" class="pgLine">
+    <span (click)="goToPage(item)" [class.isActive]="item.isActive">{{
+      item.id
+    }}</span>
+  </div>
+  <span class="pgLine" (click)="pageUp()">&raquo;</span>
 </div>
-  <jw-modal id="modal-1">
-    <h2>Задача</h2>
-    <div class="form">
-        <div>
-            <p><strong>Название задачи:</strong></p>
-            <input type="text" name="username" [(ngModel)]="name">
-        </div>
-        <p><strong>Описание задачи:</strong></p>
-        <textarea [(ngModel)]="description"></textarea>
-        <div id="buttons">
-            <button class="btn btn-primary" (click)="addNewTask()">Ок</button>
-            <button class="btn btn-denial" (click)="modalService.close('modal-1')">Закрыть</button>
-        </div>
+<jw-modal id="modal-1">
+  <h2>Задача</h2>
+  <div class="form">
+    <div>
+      <p><strong>Название задачи:</strong></p>
+      <input type="text" name="username" [(ngModel)]="name" />
     </div>
-  </jw-modal>
+    <p><strong>Описание задачи:</strong></p>
+    <textarea [(ngModel)]="description"></textarea>
+    <div id="buttons">
+      <button class="btn btn-primary" (click)="addNewTask()">Ок</button>
+      <button class="btn btn-denial" (click)="closeModal()">
+        Закрыть
+      </button>
+    </div>
+  </div>
+</jw-modal>
